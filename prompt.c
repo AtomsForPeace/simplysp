@@ -63,7 +63,7 @@ int main(int argc, char** argv) {
 
 		mpc_result_t r;
 		if (mpc_parse("<stdin>", input, Simplysp, &r)) {
-			/* On success print and delete the AST */
+			/* On success evaluate and delete the AST */
 			long result = eval(r.output);
 			printf("%li\n", result);
 			mpc_ast_delete(r.output);
